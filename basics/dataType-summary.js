@@ -1,10 +1,10 @@
 /*
-Datatypes => premimitiv & Non-premitive 
-premitive => Number ,string ,boolean, Null ,undefined ,symbol , BigINT
+Datatypes => primimitiv & Non-premitive 
+primitive => Number ,string ,boolean, Null ,undefined ,symbol , BigINT
 Non-premitive => Array , Functions , Objects
 */
 
-//Examples Premitive/call by value
+//Examples Primitive/call by value
 
 const marks = 10;//Numbber
 const score = 10.8;//Numbber
@@ -22,7 +22,7 @@ let FullName = Symbol("Hariom");//Symbol
 
 let Bignumber = 55678908786654342456n;//bigINT
 
-//Examples of Non-premitive/call by reference
+//Examples of Non-primitive/call by reference
 
 const Names = ["Hariom", "Dev", "Shiv"];//Array
 console.log(typeof Names);
@@ -37,4 +37,3 @@ const myBIO = {          //Object
 const myFunction = function(){
     console.log("Hello World");
 }
-
