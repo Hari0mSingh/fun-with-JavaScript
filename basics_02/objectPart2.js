@@ -75,3 +75,36 @@ console.log(Object.entries(linkedinUser))//return every key-value pair in sepera
 // Checking that a given value is in the object or Not
 console.log(linkedinUser.hasOwnProperty('name'));// true
 console.log(linkedinUser.hasOwnProperty('id'));// false
+
+
+//        Destructuring of objects
+const cource = {
+    courceName: "javacript",
+    courceInsructor: "Hariom Singh",
+    courceFee: "free"
+}
+
+//acces methods
+// cource.courceInsructor
+
+const {courceInsructor:Instructor} = cource;//reduced the size of the key
+console.log(Instructor)//  Hariom Singh
+
+/*
+                        Intro. to API
+*/
+
+//A simple example of JSON
+{
+    "Name":"hariom",
+    "Cource":"EH",
+    "Fee":"999"
+}
+
+
+//Sometimes API can be found in Array formate
+[
+    {},
+    {},
+    {}
+]
