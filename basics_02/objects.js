@@ -1,4 +1,6 @@
-//objects Declaration
+//objects Declaration two types => object singletob and object literal
+
+//this is Object literal
 const userData = {
     name: "Hariom",
     "Full Name":"Hariom Singh",
