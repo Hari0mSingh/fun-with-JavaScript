@@ -36,3 +36,13 @@ for (const countyNames of myMap) {
 for (const [key,value] of myMap) {
     console.log(key ,' is => ', value);// this will give key and value seperately
 }
+
+//for of loop on object
+const myobj = {
+    name:"Hariom",
+    Lname:"Singh"
+}
+for(itme of myobj){
+    // console.log(itme) o/p =>   myobj is not iterable
+}
+
