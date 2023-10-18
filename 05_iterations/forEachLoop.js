@@ -56,3 +56,9 @@ userDetails.forEach((data) => {
 //         Dev
 //         Ravi
 //         Ghio
+
+const persons = ['h','a','r','i','o','m']
+const printPerson = persons.forEach((item)=>{
+      console.log(item)
+})
+// console.log(printPerson)
