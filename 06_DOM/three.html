@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: aqua;">
+    
+</body>
+<script>
+    const div = document.createElement("div");//it will create a div
+    console.log(div)
+    div.className = "main"
+    // div.id = "myId"
+    div.id = Math.round(Math.random()*10 + 1)//given a random ID
+    div.setAttribute("tittle","generated tittle")
+    div.style.backgroundColor = "green";
+    div.style.padding = "15px";
+    // div.innerText = "Learning DOM in JS" //method 1 to add content
+    const addText = document.createTextNode("Learning DOM in JS");//method 2 to add content
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
+</html>
