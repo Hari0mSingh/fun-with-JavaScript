@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: rgb(60, 58, 58); color: aliceblue;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    // function for adding new language listitem
+    function addLanguage(langName){
+        const li = document.createElement("li");
+        li.innerHTML = langName;
+        document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("Typescript")
+
+    // optimised function
+    function addOptiLanguage(langName){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("C++");
+
+    //Edit the values
+    const secondLanguage = document.querySelector("li:nth-child(2)");
+    // secondLanguage.innerHTML = "Mogo";
+    //optimised solution
+    const newLi = document.createElement("li")
+    newLi.textContent = "Mojo";
+    secondLanguage.replaceWith(newLi)
+
+    //other Mathod for edit
+    const firstLanguage = document.querySelector("li:fist-child");
+    // firstLanguage.outerHTML = "<li>Typescript</li>"
+</script>
+</html>
