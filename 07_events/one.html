@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: grey;">
+    <h1>Amazing Pictures</h1>
+    <ul id="images">
+        <li><img width="100px"  id="car" height="100px" src="https://imgs.search.brave.com/WNDI_MNG_ld9cUv7K_85g8T5vsnKeGltZXcpLA8_w0o/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzA1LzQxLzA1/LzM2MF9GXzIwNTQx/MDU4OV9BdEZOM2pJ/c1Jmc3RkanlUcFhZ/MWhvdldobmFodlZZ/di5qcGc" alt="Car Image"></li>
+        <li><img width="100px" id="food" height="100px" src="https://imgs.search.brave.com/1Owv5UPm86sTtQ-1smbcn0h9DmUSgR7RLY3h-Fq5mF8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Zm9vZGllc2ZlZWQu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzA5L2hlYWx0/aHktZm9vZC5qcGc" alt="Food Image"></li>
+        <li><img width="100px"  id="travel" height="100px" src="https://imgs.search.brave.com/pAToDCkJ1KeFN_CZKYL4a-rzyR6JCZ6E_ZvJ3Wh3fS0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvODk1/MDgxODI0L3Bob3Rv/L3RvdXJpc3Qtdmlz/aXRpbmctc3BhaW4u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVZGbHV3ck1yTURZ/b3gxVzg4ZV92Tjl5/TnA2N2lVTmEtVnVi/OTZoZGg4Tjg9" alt="Travel Image"></li>
+        <li><img width="100px"  id="house" height="100px" src="https://imgs.search.brave.com/C1jJVeDvMSMF0Mm7--A0EvobuKX9kG-PnepTWOHuPR0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM2/OTA1Mzk1OS92ZWN0/b3IvaG91c2UuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWlB/N1lnbmJqTVQ4OU9E/OFdEdElOUG9ENnA0/LXNZLUdWcDFUdDBZ/ZGVxeEE9" alt="House Image"></li>
+        <li><img width="100px"  id="bike" height="100px" src="https://t3.ftcdn.net/jpg/00/27/35/36/360_F_27353698_nYNfdSxeR28gV3EUNdoRD6c1N3FM90bm.jpg" alt="Bike Image"></li>
+        <li><a id="google" href="https://www.google.com">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById("bike").onclick = function(){
+    //     alert('bike clicked')
+    // }
+    // document.getElementById('bike').addEventListener('click', function(){
+    //     alert('bike clicked again',false)
+    // })
+
+    //other methods
+    //attachEvent
+    //jQuery - On
+
+    //Event Objects
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('clicked inside the ul')
+    // },false)
+    // document.getElementById('bike').addEventListener('click', function(e){
+    //     console.log('bike clicked')
+    //     e.stopPropagation()
+    // },false)
+
+    // //Prevent default
+    // document.getElementById('google').addEventListener('click',(e)=>{
+    //     e.preventDefault();
+    //     e.stopPropagation();//stop the propogation
+    //     console.log('google clicked'); 
+    // },false)
+
+    //when user click any image the image will remove
+    document.querySelector('#images').addEventListener('click',(e)=>{
+        // console.log(e);
+        console.log(e.target.tagName);
+        // console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode;
+        //1st approach for removing an element
+        if(e.target.tagName==='IMG'){
+            removeIt.remove();
+        }
+
+        //2nd approach for removing an element
+        // removeIt.parentNode.removeChild(removeIt)
+
+    })
+</script>
+</html>

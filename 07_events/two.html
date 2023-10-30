@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code with Hariom</h1>
+    <button class="stop">stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Hariom")
+    // },2000)
+    const sayHariom = function(){
+        console.log("Hariom")
+    };
+    setTimeout(sayHariom,2000)
+
+    //Change the value of H1
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Code with Fun" 
+    }
+    const changeMe = setInterval(changeText,2000)
+
+    //clear timeOut
+    document.querySelector('.stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("Stopped");
+    })
+</script>
+</html>
