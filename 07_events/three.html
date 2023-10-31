@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time related things</title>
+</head>
+<body>
+    <h1>Code with YT wale Sir</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    document.querySelector('#start').addEventListener('click',()=>{
+        intervaId = setInterval(sayDate,1000)
+    })
+    const sayDate = function(){
+        console.log("Hariom",Date.now())
+    }
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(intervaId)
+    })
+
+</script>
+</html>
